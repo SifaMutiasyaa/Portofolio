@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Detail Project — Nadia Ardra Wibisono</title>
+<meta id="meta-desc" name="description" content="Detail studi kasus project data science dan pengembangan perangkat lunak.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nadiaardra.dev/project-detail.html">
+
+<meta property="og:type" content="article">
+<meta id="og-title" property="og:title" content="Detail Project — Nadia Ardra Wibisono">
+<meta id="og-desc" property="og:description" content="Detail studi kasus project data science dan pengembangan perangkat lunak.">
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050816">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/project-detail.css">
+
+<script type="application/ld+json" id="breadcrumb-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://nadiaardra.dev/" },
+    { "@type": "ListItem", "position": 2, "name": "Project", "item": "https://nadiaardra.dev/#projects" },
+    { "@type": "ListItem", "position": 3, "name": "Detail Project", "item": "https://nadiaardra.dev/project-detail.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#detail-main" class="skip-link">Lompat ke konten utama</a>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="noise-overlay" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<header id="navbar" class="scrolled">
+  <a href="index.html" class="nav-logo">N<span class="dot">.</span>AW</a>
+  <nav class="nav-links">
+    <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i>&nbsp; Kembali ke Project</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Toggle bahasa">
+      <span id="lang-label">ID</span>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle tema">
+      <i class="fa-solid fa-moon" id="theme-icon"></i>
+    </button>
+    <a href="index.html#contact" class="nav-cta magnetic">Hubungi Saya</a>
+  </div>
+</header>
+
+<main id="detail-main">
+  <section style="padding-top:150px;">
+    <div class="section-container" id="detail-root">
+      <div class="detail-loading">Memuat detail project…</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="section-container footer-inner">
+    <div class="nav-logo">N<span class="dot">.</span>AW</div>
+    <div id="footer-social" class="footer-social"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+  <p class="footer-copyright">© <span id="current-year"></span> Nadia Ardra Wibisono.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/cursor.js" defer></script>
+<script src="assets/js/three-background.js" defer></script>
+<script src="assets/js/project-detail.js" defer></script>
+</body>
+</html>

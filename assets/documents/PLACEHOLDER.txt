@@ -1,0 +1,3 @@
+Letakkan file CV Anda di folder ini dengan nama:
+CV-Nadia-Ardra-Wibisono.pdf
+(atau ganti nama filenya, lalu perbarui juga path "cvFile" di assets/js/data.js)

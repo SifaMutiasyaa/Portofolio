@@ -1,988 +1,347 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sifa Mutiasya Hendayana Puteri — Data Scientist &amp; Full Stack Developer</title>
+<meta name="title" content="Sifa Mutiasya Hendayana Puteri — Data Scientist & Full Stack Developer">
+<meta name="description" content="Portfolio Sifa Mutiasya Hendayana Puteri — Data Analyst, Data Scientist, Machine Learning Engineer, dan Full Stack Developer. Lihat proyek data science, dashboard analitik, dan aplikasi web yang telah dibangun.">
+<meta name="keywords" content="data analyst, data scientist, machine learning engineer, full stack developer, portfolio, python, power bi, laravel, indonesia">
+<meta name="author" content="Sifa Mutiasya Hendayana Puteri">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nadiaardra.dev/">
 
-  <head>
-    <meta charset="UTF-8">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nadiaardra.dev/">
+<meta property="og:title" content="Sifa Mutiasya Hendayana Puteri — Data Scientist & Full Stack Developer">
+<meta property="og:description" content="Portfolio interaktif: proyek data science, machine learning, dan aplikasi web full stack.">
+<meta property="og:image" content="https://nadiaardra.dev/assets/images/og-cover.jpg">
+<meta property="og:locale" content="id_ID">
 
-    <!-- Page Title -->
-    <title>Sifa Mutiasya - Website Portofolio</title>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sifa Mutiasya Hendayana Puteri — Data Scientist & Full Stack Developer">
+<meta name="twitter:description" content="Portfolio interaktif: proyek data science, machine learning, dan aplikasi web full stack.">
+<meta name="twitter:image" content="https://nadiaardra.dev/assets/images/og-cover.jpg">
 
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050816">
 
-    <!-- Viewport Meta-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-   
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Template Styles Start -->
-    <link rel="stylesheet" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!-- Template Styles End -->
+<link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Custom Browser Color Start -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
-    <meta name="msapplication-navbutton-color" content="#111111">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Custom Browser Color End -->
-  </head>
+<!-- JSON-LD: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sifa Mutiasya Hendayana Puteri",
+  "url": "https://sifamutiasya.dev/",
+  "jobTitle": ["Data Analyst", "Data Scientist", "Machine Learning Engineer", "Full Stack Developer"],
+  "email": "mailto:hello@sifamutiasya13.dev",
+  "sameAs": [
+    "https://github.com/username",
+    "https://linkedin.com/in/username",
+    "https://instagram.com/username"
+  ]
+}
+</script>
+<!-- JSON-LD: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Nadia Ardra Wibisono — Portfolio",
+  "url": "https://nadiaardra.dev/"
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Lompat ke konten utama</a>
 
-  <body>
+<!-- ===================== Loading Screen ===================== -->
+<div id="loader" role="status" aria-live="polite" aria-label="Memuat halaman">
+  <div class="loader-logo">S<span>.</span>MH</div>
+  <div class="loader-bar-track"><div class="loader-bar-fill" id="loader-bar-fill"></div></div>
+  <div class="loader-percent" id="loader-percent">0%</div>
+  <div class="loader-status" id="loader-status"></div>
+</div>
+<canvas id="tunnel-canvas" style="display:none;"></canvas>
 
+<!-- ===================== Ambient background & cursor ===================== -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="noise-overlay" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
 
-    <!-- Header Start -->
-    <header id="header" class="header d-flex justify-content-between">
-
-      <!-- Navigation Menu Start -->
-      <div class="header__navigation">
-        <nav id="menu" class="menu">
-          <ul class="menu__list d-flex justify-content-start">
-            <li class="menu__item">
-              <a class="menu__link btn" href="#home">
-                <span class="menu__caption">Home</span>
-                <i class="ph-bold ph-house-simple"></i>
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link btn" href="#portfolio">
-                <span class="menu__caption">Portfolio</span>
-                <i class="ph-bold ph-squares-four"></i>
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link btn" href="#about">
-                <span class="menu__caption">About Me</span>
-                <i class="ph-bold ph-user"></i>
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link btn" href="#resume">
-                <span class="menu__caption">Resume</span>
-                <i class="ph-bold ph-article"></i>
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link btn" href="#contact">
-                <span class="menu__caption">Contact</span>
-                <i class="ph-bold ph-envelope"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Navigation Menu End -->
-
-      <!-- Header Controls Start -->
-      <div class="header__controls d-flex justify-content-end">
-        <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
-        <a id="notify-trigger" class="header__trigger btn" href="#contact">
-          <span class="trigger__caption">Let’s connect! </span>
-          <i class="ph-bold ph-chat-dots"></i>
-        </a>
-      </div>
-      <!-- Header Controls End -->
-
-    </header>
-    <!-- Header End -->
-
-    <!-- Gradient Background Start -->
-    <div class="gradient-background">
-      <div class="blur"></div>
-      <div class="blur"></div>
-      <div class="blur"></div>
+<!-- ===================== Navbar ===================== -->
+<header id="navbar">
+  <a href="#hero" class="nav-logo"><span data-name-initial>S</span><span class="dot">.</span>MH</a>
+  <nav class="nav-links" aria-label="Navigasi utama">
+    <a href="#hero" data-key="nav_home">Home</a>
+    <a href="#about" data-key="nav_about">Tentang Saya</a>
+    <a href="#education" data-key="nav_education">Pendidikan</a>
+    <a href="#experience" data-key="nav_experience">Pengalaman</a>
+    <a href="#skills" data-key="nav_skills">Keahlian</a>
+    <a href="#projects" data-key="nav_projects">Project</a>
+    <a href="#certificates" data-key="nav_certificates">Sertifikat</a>
+    <a href="#contact" data-key="nav_contact">Kontak</a>
+  </nav>
+  <div class="nav-actions">
+    <div class="language-selector">
+      <button class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
     </div>
-    <!-- Gradient Background End -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle tema">
+      <i class="fa-solid fa-moon" id="theme-icon"></i>
+    </button>
+    <a href="#contact" class="nav-cta magnetic" data-key="nav_cta">Hubungi Saya</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+</header>
 
-    <!-- Avatar Side Block Start -->
-    <div id="avatar" class="avatar">
-      <div class="avatar__container d-flex flex-column justify-content-lg-between">
-        <!-- image and logo -->
-        <div class="avatar__block">
-          <div class="avatar__logo d-flex align-items-center">
-            <div class="logo__image">
-              <!-- Your Logo Here!!! -->
-              <!--<img src="img/logo.svg" alt="Braxton - Personal Portfolio & Resume HTML Template Logo">-->
-             
-                <g>
-                  <linearGradient id="gradientFill" gradientUnits="userSpaceOnUse" x1="9.9604" y1="75.0338" x2="75.0387" y2="9.9555">
-                    <stop  offset="0" style="stop-color:var(--accent)"/>
-                    <stop  offset="1" style="stop-color:var(--secondary)"/>
-                  </linearGradient>
-                  <path class="gradient-fill" d="M51,0H34C15.2,0,0,15.2,0,34v17c0,14.3,8.9,26.6,21.4,31.6c0,0,0,0,0,0l0,0C25.3,84.1,29.5,85,34,85h17
-                    c6,0,11.7-1.6,16.6-4.3c0.1-0.1,0.2-0.1,0.3-0.2C78.1,74.6,85,63.6,85,51V34C85,15.2,69.8,0,51,0z M83,51c0,10.7-5.3,20.2-13.4,26
-                    v-2.5v-3.9h3.9v-3.9h-3.9v-3.9h3.9v-3.9h-3.9H67v-3.9V51h-3.9v3.9v3.9h2.6v3.9v3.9v3.9h-3.9h-3.9v3.9h3.9h3.9v3.9v1
-                    C61.3,81.7,56.3,83,51,83H34c-4.5,0-8.7-0.9-12.6-2.6v-2v-3.9h3.9h3.9v-3.9h-3.9h-3.9v-3.9v-3.9v-3.9H24v-3.9V51h-3.9v3.9v3.9h-2.6
-                    h-3.9v3.9h3.9v3.9h-3.9v3.9h3.9v3.9v3.9C8.2,72.8,2,62.6,2,51V34C2,16.4,16.4,2,34,2h17c17.6,0,32,14.4,32,32V51z M50.1,54.9H54
-                    v3.9v3.9h-3.9v-3.9V54.9z M33.1,54.9H37v3.9v3.9h-3.9v-3.9V54.9z M27.9,51H24v-3.9v-3.9v-3.9h3.9v3.9v3.9V51z M31.8,39.3h-3.9v-3.9
-                    h3.9V39.3z M31.8,43.2v-3.9h3.9v3.9H31.8z M63.1,47.1V51h-3.9v-3.9v-3.9v-3.9h3.9v3.9V47.1z M35.7,47.1v-3.9h3.9h3.9h3.9h3.9v3.9
-                    h-3.9h-3.9h-3.9H35.7z M59.2,39.3h-3.9v-3.9h3.9V39.3z M55.3,43.2h-3.9v-3.9h3.9V43.2z"/>
-                </g>
-              </svg>
-            </div>
-            <div class="avatar_block">
-              <h5>Sifa Mutiasya</h5>
-            </div>
-          </div>
-          <div class="avatar__image">
-            <img src="img/avatars/sifa.png" alt="Braxton - Personal Portfolio & Resume HTML Template Avatar">
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="glass" style="position:fixed;top:78px;right:20px;left:20px;z-index:499;display:none;padding:20px;border-radius:16px;">
+  <style>#mobile-menu.open{display:flex !important;flex-direction:column;gap:6px;}</style>
+  <a href="#hero" data-key="nav_home">Home</a>
+  <a href="#about" data-key="nav_about">Tentang Saya</a>
+  <a href="#education" data-key="nav_education">Pendidikan</a>
+  <a href="#experience" data-key="nav_experience">Pengalaman</a>
+  <a href="#skills" data-key="nav_skills">Keahlian</a>
+  <a href="#projects" data-key="nav_projects">Project</a>
+  <a href="#certificates" data-key="nav_certificates">Sertifikat</a>
+  <a href="#contact" data-key="nav_contact">Kontak</a>
+  <div style="display:flex;gap:12px;margin-top:8px;padding-top:12px;border-top:1px solid var(--glass-border);">
+    <button class="lang-btn-mobile active" data-lang="id">🇮🇩 ID</button>
+    <button class="lang-btn-mobile" data-lang="en">🇬🇧 EN</button>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ===================== Hero ===================== -->
+  <section id="hero" aria-label="Perkenalan">
+    <div class="section-container hero-grid">
+      <div>
+        <h1 class="hero-name reveal-hero" data-name style="opacity:0;transform:translateY(30px);">Sifa Mutiasya Hendayana Puteri</h1>
+        <div class="hero-role-wrap" style="opacity:0;transform:translateY(20px);">
+          <span class="bracket">&lt;</span><span id="typed-role"></span><span class="typed-cursor">|</span><span class="bracket">/&gt;</span>
+        </div>
+        <p class="hero-desc" data-tagline style="opacity:0;transform:translateY(20px);"></p>
+        <div class="hero-actions" style="opacity:0;transform:translateY(20px);">
+          <a href="#projects" class="btn btn-primary magnetic"><i class="fa-solid fa-layer-group"></i> Lihat Portfolio</a>
+          <a href="assets/documents/CV-Sifa-Mutiasya-Hendayana-Puteri.pdf" data-cv-link download class="btn btn-ghost magnetic"><i class="fa-solid fa-download"></i> Unduh CV</a>
+          <a href="#contact" class="btn btn-ghost magnetic"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</a>
+        </div>
+      </div>
+      <div class="hero-visual" style="opacity:0;">
+        <div class="profile-photo-container">
+          <div class="profile-photo-ring"></div>
+          <div class="profile-photo-wrapper">
+            <img src="assets/images/profile.jpg" alt="Foto Profil" class="profile-photo" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:4rem;color:var(--text);\'>S</span>'">
           </div>
         </div>
-        <!-- data caption #1 -->
-        <div class="avatar__block">
-          <h6>
-            <small class="top">Specialization:</small>
-            Software Enginer
-          </h6>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">Scroll<div class="scroll-line"></div></div>
+  </section>
+
+ <!-- ===================== Tentang Saya ===================== -->
+<section id="about" aria-labelledby="about-title">
+  <div class="section-container">
+    <div class="about-grid">
+      <!-- Kolom Kiri: Foto + Stats -->
+      <div class="about-left">
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo-ring"></div>
+          <div class="about-photo">
+            <img src="assets/images/profile.jpg" alt="Foto Sifa Mutiasya Hendayana Puteri" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
+          </div>
         </div>
-        <!-- data caption #2 -->
         
-     <!-- socials and CTA button -->
-<div class="avatar__block mt-4">
-  <div class="avatar__socials">
-    <ul class="socials-square d-flex justify-content-between">
-      <li class="socials-square__item">
-        <a class="socials-square__link btn" href="https://www.linkedin.com/in/sifa-mutiasya-hendayana-puteri-130128247/" target="_blank" rel="noopener" title="LinkedIn"><i class="ph-bold ph-linkedin-logo"></i></a>
-      </li>
-      <li class="socials-square__item">
-        <a class="socials-square__link btn" href="https://www.instagram.com/siff_mutiasya" target="_blank" rel="noopener" title="Instagram"><i class="ph-bold ph-instagram-logo"></i></a>
-      </li>
-      <li class="socials-square__item">
-        <a class="socials-square__link btn" href="https://github.com/SifaMutiasyaa" target="_blank" rel="noopener" title="GitHub"><i class="ph-bold ph-github-logo"></i></a>
-      </li>
-      <li class="socials-square__item">
-        <a class="socials-square__link btn" href="https://gitlab.com/SifaMutiasyaa" target="_blank" rel="noopener" title="GitLab"><i class="ph-bold ph-gitlab-logo"></i></a>
-      </li>
-    </ul>
-  </div>
-</div>
-          <div class="avatar__btnholder">
-            <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent" href="#contact" target="_blank">
-              <span class="btn-caption">Let’s connect! 🚀</span>
-            </a>
-          </div>
-        </div>
+        <!-- Stats di bawah foto -->
+        <div id="about-stats" class="stats-grid reveal"></div>
       </div>
-    </div>
-    <!-- Avatar Side Block End -->
-
-    <!-- Page Content Start -->
-    <div id="content" class="content">
-      <div class="content__wrapper">
-
-        <!-- Intro Section Start -->
-        <section id="home" class="main intro">
-
-          <!-- Headline Start -->
-          <div id="headline" class="headline d-flex align-items-start flex-column" data-speed="1">
-            <p class="headline__subtitle animate-headline">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
-                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
-              </svg>
-              <span>Let's meet!</span>
-            </p>
-            <h1 class="headline__title animate-headline">I'm Sifa Mutiasya<br>Software Enginer</h1>
-            <div class="headline__btnholder d-flex flex-column flex-sm-row">
-              <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline" href="#portfolio">
-                <span class="btn-caption">My Works</span>
-                <i class="ph-bold ph-squares-four"></i>
-              </a>
-              <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="cv_sifamutiasya.pdf" download="cv-sifa-mutiasya.pdf">
-                <span class="btn-caption">Download CV</span>
-                <i class="ph-bold ph-download-simple"></i>
-              </a>
-            </div>
-          </div>
-          <!-- Headline End -->
-
-          <!-- Scroll Button Start -->
-          <div class="rotating-btn">
-            <a href="#portfolio" class="rotating-btn__link slide-down">
-              <!-- SVG rotating text -->
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve" 
-                class="animate-rotation" data-value="360">
-                <defs>
-                  <path id="textPath" d="M110,59.5c0,27.6-22.4,50-50,50s-50-22.4-50-50s22.4-50,50-50S110,31.9,110,59.5z"/>
-                </defs>
-                <g>
-                  <use xlink:href="#textPath" fill="none"></use>
-                  <text>
-                    <!-- button text here!!! -->
-                    <textPath xlink:href="#textPath">Scroll for More * Scroll for More * </textPath>
-                  </text>
-                </g>
-              </svg>
-              <!-- arrow icon -->
-              <i class="ph-bold ph-arrow-down"></i>
-            </a>
-          </div>
-          <!-- Scroll Button End -->
-
-        </section>
-        <!-- Intro Section End -->
-
-        <!-- Portfolio Section Start -->
-        <section id="portfolio" class="inner inner-first portfolio">
-
-          <!-- Content Block - H2 Section Title Start -->
-          <div class="content__block section-grid-title">
-            <p class="h2__subtitle animate-in-up">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
-                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
-              </svg>
-              <span>Portfolio</span>
-            </p>
-            <h2 class="h2__title animate-in-up">Check out my Projects</h2>
-</div>
-          </div>
-          <!-- Content Block - H2 Section Title End -->
-
-          <!-- Content Block - Works Gallery Start -->
-          <div class="content__block grid-block">
-            <div class="container-fluid px-0 inner__gallery">
-              <div class="row gx-0 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-    
-                <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/works/yumify.png" data-image="img/works/yumify.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="img/works/yumify.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
-                  </a>
-                  <figcaption class="gallery__descr" itemprop="caption description">
-                    <h5>YUMIFY</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag opposite">Yumify</span>
-                      <span class="rounded-tag opposite">Frontend</span>
-                    </div>
-                    <p class="small">An app for favorite recipes and personalized recipe recommendations, available on the Google Play Store. 
-                    </p>
-                  </figcaption>
-                </figure>
-                <!-- Works Gallery Single Item End -->
-    
-                <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/works/webdesa.png" data-image="img/works/webdesa.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="img/works/webdesa.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
-                  </a>
-                  <figcaption class="gallery__descr opposite" itemprop="caption description">
-                    <h5 class="opposite">WEBSITE PELAYANAN MASYARAKAT</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag">Public service</span>
-                      <span class="rounded-tag">Project Manager</span>
-                    </div>
-                    <p class="small">An integrated public service platform for managing administrative processes and engaging with citizen feedback.
-                    </p>
-                  </figcaption>
-                </figure>
-                <!-- Works Gallery Single Item End -->
-    
-                <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/works/foodnow.png" data-image="img/works/foodnow.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="img/works/foodnow.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
-                  </a>
-                  <figcaption class="gallery__descr opposite" itemprop="caption description">
-                    <h5 class="opposite">FOODNOW</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag">FoodNow</span>
-                      <span class="rounded-tag">Fullstack</span>
-                    </div>
-                    <p class="small">A user-friendly food ordering app that lets you explore, search, and order your favorite meals easily.
-                    </p>
-                  </figcaption>
-                </figure>
-                <!-- Works Gallery Single Item End -->
-    
-                <!-- Works Gallery Single Item Start -->
-                <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/works/tokobuku.png" data-image="img/works/tokobuku.png" class="gallery__link" itemprop="contentUrl" data-size="1400x1400">
-                    <img src="img/works/tokobuku.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
-                  </a>
-                  <figcaption class="gallery__descr " itemprop="caption description">
-                    <h5>BOOK STORE</h5>
-                    <div class="card__tags d-flex flex-wrap">
-                      <span class="rounded-tag opposite">Book Store</span>
-                      <span class="rounded-tag opposite">Fullstack</span>
-                    </div>
-                    <p class="small">An online bookstore website that makes it easy to order books and includes an admin panel for managing the book inventory.
-                    </p>
-                  </figcaption>
-                </figure>
-                <!-- Works Gallery Single Item End -->
-    
-              </div>
-            </div>
-            <div class="text-center mt-3 animate-in-up">
-    <a href="perbaiki.html" class="btn btn-default btn-hover btn-hover-accent">
-      <span class="btn-caption">See other projects</span>
-      <i class="ph-bold ph-arrow-right"></i>
-    </a>
-  </div>
-          </div>
-          <!-- Content Block - Works Gallery End -->
-
-        </section>
-        <!-- Portfolio Section End -->
-
-        <!-- About Section Start -->
-        <section id="about" class="inner about">
-
-          <!-- Content Block - H2 Section Title Start -->
-          <div class="content__block section-grid-title">
-            <p class="h2__subtitle animate-in-up">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
-                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
-              </svg>
-              <span>About Me</span>
-            </p>
-            <h2 class="h2__title animate-in-up">Learn more about me and what I do!</h2>
-          </div>
-          <!-- Content Block - H2 Section Title End -->
-
+      
+      <!-- Kolom Kanan: Deskripsi + Prestasi -->
+      <div class="about-right">
+        <div class="about-card glass reveal">
+          <span class="eyebrow">Tentang Saya</span>
+          <p data-summary style="color:var(--text-dim);font-size:1.02rem;"></p>
           
+          <!-- Prestasi -->
+          <div id="about-achievements" class="about-achievements"></div>
+          
+          <!-- Keahlian / Teknologi yang Dikuasai -->
+          <div id="about-skills-tags" class="about-tags"></div>
+          
+          <!-- Project & Sertifikat Count -->
+          <div id="about-quick-stats" class="about-quick-stats"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <!-- Content Block - About Me Data Start -->
-          <div class="content__block grid-block block-large">
-            <div class="container-fluid p-0">
-              <div class="row g-0 justify-content-between">
-                
-                <!-- About Me Description Start -->
-                <div class="col-12 col-xl-8 grid-item about-descr">
-                  <p class="about-descr__text animate-in-up">
-                    The sixth semester student of informatics engineering from UIN SGD who has interest on IT. Having ability in leadership, public speaking, communication and capable to work in team, adaptable in new circumstances during college i have done some projects called Oop Programe and worked a simple website for online stationary shop administration. i also have some experience to join volunter programe. 
-                  </p>
-                  <p class="about-descr__text animate-in-up">
-                    I have developed proficiency in 
-                    <a href="#0" class="text-link">HTML, CSS, Java Script, TypeScript, Android Native and database management (MySQL, MongDB, Oracle, ElasticSearch, Redis), as well as C++.</a> 
-                    My experience includes working on multiple website projects using Java and PHP, leveraging frameworks such as Laravel and Java Spring to build efficient, scalable applications. Additionally, I have designed several database systems and implemented unique queries to optimize data retrieval and management
-                  </p>
-                  <div class="btn-group about-descr__btnholder animate-in-up">
-                    <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="cv_sifamutiasya.pdf" download="cv-sifa-mutiasya.pdf">
-                      <span class="btn-caption">Download CV</span>
-                      <i class="ph-bold ph-download-simple"></i>
-                    </a>
-                  </div>
-                </div>
-                <!-- About Me Description End -->
+  <!-- ===================== Pendidikan ===================== -->
+  <section id="education" aria-labelledby="education-title">
+    <div class="section-container">
+      <span class="eyebrow reveal">Riwayat Akademik</span>
+      <h2 id="education-title" class="section-title reveal">Pendidikan</h2>
+      <p class="section-sub reveal">Perjalanan akademik yang membentuk dasar berpikir analitis dan teknis saya.</p>
+      <div id="education-timeline" class="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Pengalaman ===================== -->
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="section-container">
+      <span class="eyebrow reveal">Rekam Jejak</span>
+      <h2 id="experience-title" class="section-title reveal">Pengalaman Kerja</h2>
+      <p class="section-sub reveal">Peran nyata di industri, dari riset hingga produk yang digunakan pengguna sesungguhnya.</p>
+      <div id="experience-timeline" class="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Keahlian ===================== -->
+  <section id="skills" aria-labelledby="skills-title">
+    <div class="section-container">
+      <span class="eyebrow reveal">Peta Kemampuan</span>
+      <h2 id="skills-title" class="section-title reveal">Keahlian</h2>
+      <p class="section-sub reveal">Tingkat penguasaan setiap teknologi dan alat yang saya kuasai.</p>
+      <div class="skills-grid reveal">
+        <div class="skills-container" id="skills-container">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Project ===================== -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="section-container">
+      <span class="eyebrow reveal">Karya Terpilih</span>
+      <h2 id="projects-title" class="section-title reveal">Project</h2>
+      <p class="section-sub reveal">Studi kasus nyata: dari eksplorasi data hingga aplikasi yang benar-benar berjalan.</p>
       
-                <!-- About Me Information Start -->
-                <div class="col-12 col-xl-4 grid-item about-info">
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Name</small>
-                      Sifa Mutiasya Hendayana Puteri
-                    </h6>
-                  </div>
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Phone</small>
-                      <a class="text-link-bold" href="tel:+12127089400">089657767722</a>
-                    </h6>
-                  </div>
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Email</small>
-                      <a class="text-link-bold" href="mailto:example@example.com?subject=Message%20from%20your%20site">sifamutiasya14@gmail.com</a>
-                    </h6>
-                  </div>
-                  <div class="about-info__item animate-in-up">
-                    <h6>
-                      <small class="top">Location</small>
-                      <a class="text-link-bold" href="https://maps.app.goo.gl/xMJXTEUeHkv6kYRQ6" target="_blank" rel="noopener">Bandung, Indonesia</a>
-                    </h6>
-                  </div>
-                </div>
-                <!-- About Me Information End -->
+      <!-- Search Bar -->
+      <div class="search-bar reveal">
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="project-search" placeholder="Cari proyek berdasarkan nama atau teknologi..." aria-label="Cari proyek">
+      </div>
       
-              </div>
-            </div>
+      <!-- Filters -->
+      <div id="project-filters" class="filter-bar reveal"></div>
+      
+      <!-- Carousel Container -->
+      <div class="projects-carousel-container reveal">
+        <button class="carousel-nav carousel-prev" aria-label="Proyek sebelumnya">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="projects-carousel-viewport">
+          <div class="projects-carousel-track" id="projects-grid">
+            <!-- Project cards rendered by JS -->
           </div>
-          <!-- Content Block - About Me Data End -->
+        </div>
+        <button class="carousel-nav carousel-next" aria-label="Proyek berikutnya">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-dots" id="project-dots"></div>
+    </div>
+  </section>
 
-          <!-- Content Block - Services Start -->
-          <div class="content__block grid-block">
-            <div class="container-fluid p-0">
-              <div class="row g-0 align-items-stretch cards">
-                <!-- services cards grid single item -->
-                <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Frontend<br>development</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">Software Enginer</span>
-                        <span class="rounded-tag tag-outline">Design to Code</span>
-                      </div>
-                      <p class="small cards__text animate-in-up">I work with HTML/CSS, PHP, Java Script and TypeScript</p>
-                    </div>
-                    <div class="cards__image d-flex animate-in-up">
-                      <img src="img/services/1200x900_s01.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
-                </div>
-                <!-- services grid cards single item -->
-                <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Backend<br>Development</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">Software Enginer</span>
-                        <span class="rounded-tag tag-outline">Database</span>
-                      </div>
-                      <p class="small cards__text animate-in-up">I use database design and management with MySQL, MongoDB, Oracle, Elasticsearch, and Redis.
-                      </p>
-                    </div>
-                    <div class="cards__image d-flex animate-in-up">
-                      <img src="img/services/1200x900_s02.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
-                </div>
-                <!-- services grid cards single item -->
-                <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Android<br>Development</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">Social Media</span>
-                        <span class="rounded-tag tag-outline">Android</span>
-                      </div>
-                      <p class="small cards__text animate-in-up">I specialize in Android development using Native technologies, performance optimization, and seamless integration with databases and APIs.
-                      </p>
-                    </div>
-                    <div class="cards__image d-flex">
-                      <img src="img/services/1200x900_s03.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
-                </div>
-                <!-- services grid cards single item -->
-                <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
-                  <div class="cards__card d-flex flex-column">
-                    <div class="cards__descr">
-                      <h4 class="cards__title animate-in-up">Project<br>Manager</h4>
-                      <div class="cards__tags d-flex flex-wrap animate-in-up">
-                        <span class="rounded-tag tag-outline">Strategy</span>
-                        <span class="rounded-tag tag-outline">Optimization</span>
-                      </div>
-                      <p class="small cards__text animate-in-up">I oversee project planning, team coordination, and reporting to ensure efficient delivery and collaboration.
-                      </p>
-                    </div>
-                    <div class="cards__image d-flex animate-in-up">
-                      <img src="img/services/1200x900_s04.webp" alt="Service/Feature Image">
-                    </div>
-                  </div>
-                </div>
-    
-              </div>
-            </div>
+  <!-- ===================== Sertifikat ===================== -->
+  <section id="certificates" aria-labelledby="certificates-title">
+    <div class="section-container">
+      <span class="eyebrow reveal">Kredensial</span>
+      <h2 id="certificates-title" class="section-title reveal">Sertifikat</h2>
+      <p class="section-sub reveal">Bukti pembelajaran berkelanjutan di bidang data dan pengembangan perangkat lunak.</p>
+      
+      <!-- Certificate Filters -->
+      <div id="cert-filters" class="filter-bar reveal"></div>
+      
+      <!-- Carousel Container -->
+      <div class="cert-carousel-container reveal">
+        <button class="carousel-nav carousel-prev" aria-label="Sertifikat sebelumnya">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="cert-carousel-viewport">
+          <div class="cert-carousel-track" id="cert-grid">
+            <!-- Certificate cards rendered by JS -->
           </div>
-          <!-- Content Block - Services End -->
-
-        </section>
-        <!-- About Section End -->
-
-        <!-- Resume Section Start -->
-        <section id="resume" class="inner resume">
-
-          <!-- Content Block - H2 Section Title Start -->
-          <div class="content__block block-large">
-            <p class="h2__subtitle animate-in-up">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
-                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
-              </svg>
-              <span>Resume</span>
-            </p>
-            <h2 class="h2__title animate-in-up">Education and practical experience</h2>
-          </div>
-        
-          <div class="content__block block-large">
-
-            <!-- H3 Block Start -->
-            <div class="section-h3">
-              <h3 class="h3__title animate-in-up">My education</h3>
-            </div>
-            <!-- H3 Block End -->
-
-            <!-- Education Lines Start -->
-            <div class="container-fluid p-0 resume-lines">
-              <!-- education single item -->
-              <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2">
-                  <span class="resume-lines__date animate-in-up">2022 - now</span>
-                </div>
-                <div class="col-12 col-md-5">
-                  <h5 class="resume-lines__title animate-in-up">UNIVERSITAS ISLAM NEGERI SUNAN GUNUNG DJATI</h5>
-                  <p class="resume-lines__source animate-in-up">
-                    <a href="#0" class="text-link-bold" target="_blank">Informatics Engineering GPA 3.85/4.00</a>
-                  </p>
-                </div>
-                <div class="col-12 col-md-5">
-                  <p class="small resume-lines__descr animate-in-up">Experience in various informatics projects and organizational management.</p>
-                </div>
-              </div>
-              <!-- education single item -->
-              <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2">
-                  <span class="resume-lines__date animate-in-up">2019 - 2022</span>
-                </div>
-                <div class="col-12 col-md-5">
-                  <h5 class="resume-lines__title animate-in-up">MAN 1 KOTA SUKABUMI</h5>
-                  <p class="resume-lines__source animate-in-up">
-                    <a href="#0" class="text-link-bold" target="_blank">Ilmu Pengetahuan Alam (IPA) Nilai Akhir 88/100</a>
-                  </p>
-                </div>
-                <div class="col-12 col-md-5">
-                  <p class="small resume-lines__descr animate-in-up">Experience in digital media and organization, managing content, branding, and team coordination.</p>
-                </div>
-              </div>
-              <!-- education single item -->
-              <!-- <div class="row g-0 resume-lines__item animate-in-up">
-                <div class="col-12 col-md-2">
-                  <span class="resume-lines__date animate-in-up">2022</span>
-                </div>
-                <div class="col-12 col-md-5">
-                  <h5 class="resume-lines__title animate-in-up">UI/UX Designer</h5>
-                  <p class="resume-lines__source animate-in-up"> Course by
-                    <a href="#0" class="text-link-bold" target="_blank">Coursera</a>
-                  </p>
-                </div>
-                <div class="col-12 col-md-5">
-                  <p class="small resume-lines__descr animate-in-up">This cource is about how to complete the design process from beginning to end.</p>
-                </div>
-              </div> -->
-            </div>
-            <!-- Education Lines End -->
-
-          </div>
-          <!-- Content Block - Education End -->
-
-          <!-- Content Block - Experience Start -->
-          <div class="content__block block-large">
-
-            <!-- H3 Block Start -->
-            <div class="section-h3">
-              <h3 class="h3__title animate-in-up">Experience</h3>
-            </div>
-            <!-- H3 Block End -->
-
-             <!-- Experience Lines Start -->
-<div class="container-fluid p-0 resume-lines">
-  <!-- experience single item -->
-  <div class="row g-0 resume-lines__item animate-in-up">
-    <div class="col-12 col-md-2">
-      <span class="resume-lines__date animate-in-up">2025</span>
+        </div>
+        <button class="carousel-nav carousel-next" aria-label="Sertifikat berikutnya">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="carousel-dots" id="cert-dots"></div>
     </div>
-    <div class="col-12 col-md-5">
-      <h5 class="resume-lines__title animate-in-up">Fullstack Developer Cohort</h5>
-      <p class="resume-lines__source animate-in-up">in the
-        <a href="#0" class="text-link-bold" target="_blank">Coding Camp powered by DBS</a>
-        team
-      </p>
+  </section>
+
+  <!-- ===================== Kontak ===================== -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-container">
+      <span class="eyebrow reveal">Mari Terhubung</span>
+      <h2 id="contact-title" class="section-title reveal">Kontak</h2>
+      <p class="section-sub reveal">Terbuka untuk peluang kerja, kolaborasi riset, maupun proyek freelance.</p>
+      <div class="contact-grid" style="margin-top:40px;">
+        <div class="contact-card glass reveal">
+          <div id="contact-details"></div>
+        </div>
+        <div class="reveal">
+          <canvas id="map-canvas"></canvas>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-md-5">
-      <p class="small resume-lines__descr animate-in-up"> I actively participate in intensive training focused on both front-end and back-end development. Throughout the program, I collaborate with peers, build scalable web applications, and deepen my understanding of modern technologies</p>
+  </section>
+
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer>
+  <div class="section-container footer-inner">
+    <div>
+      <div class="nav-logo"><span data-name-initial>S</span><span class="dot">.</span>MH</div>
     </div>
+    <div id="footer-social" class="footer-social"></div>
+    <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
   </div>
-  <!-- experience single item -->
+  <p class="footer-copyright">© <span id="current-year"></span> <span data-name>Sifa Mutiasya Hendayana Puteri</span>. Dibuat dengan Three.js, GSAP &amp; secangkir kopi.</p>
+</footer>
 
-            <!-- Experience Lines Start -->
-<div class="container-fluid p-0 resume-lines">
-  <!-- experience single item -->
-  <div class="row g-0 resume-lines__item animate-in-up">
-    <div class="col-12 col-md-2">
-      <span class="resume-lines__date animate-in-up">2024 - 2025</span>
-    </div>
-    <div class="col-12 col-md-5">
-      <h5 class="resume-lines__title animate-in-up">Frontend Coordinator</h5>
-      <p class="resume-lines__source animate-in-up">in the
-        <a href="#0" class="text-link-bold" target="_blank">IF Digital</a>
-        team
-      </p>
-    </div>
-    <div class="col-12 col-md-5">
-      <p class="small resume-lines__descr animate-in-up">Coordinated the frontend team, established source code writing standards, and optimized development workflows.</p>
-    </div>
-  </div>
-  <!-- experience single item -->
-  <div class="row g-0 resume-lines__item animate-in-up">
-    <div class="col-12 col-md-2">
-      <span class="resume-lines__date animate-in-up">2024 </span>
-    </div>
-    <div class="col-12 col-md-5">
-      <h5 class="resume-lines__title animate-in-up">Project Manager</h5>
-      <p class="resume-lines__source animate-in-up">in the
-        <a href="#0" class="text-link-bold" target="_blank">Village Government</a>
-      </p>
-    </div>
-    <div class="col-12 col-md-5">
-      <p class="small resume-lines__descr animate-in-up">Managed the project team and facilitated communication with village authorities to ensure smooth project execution.</p>
-    </div>
-  </div>
-  <!-- experience single item -->
-  <div class="row g-0 resume-lines__item animate-in-up">
-    <div class="col-12 col-md-2">
-      <span class="resume-lines__date animate-in-up">2023 - 2024</span>
-    </div>
-    <div class="col-12 col-md-5">
-      <h5 class="resume-lines__title animate-in-up">Himpunan Mahasiswa Teknik Informatika (HIMATIF)</h5>
-      <p class="resume-lines__source animate-in-up">in the
-        <a href="#0" class="text-link-bold" target="_blank">Department of Informatics Engineering</a>
-      </p>
-    </div>
-    <div class="col-12 col-md-5">
-      <p class="small resume-lines__descr animate-in-up">Managed financial records, allocated budgets for various events, and contributed to multiple organizing committees.</p>
-    </div>
-  </div>
-  <!-- experience single item -->
-  <div class="row g-0 resume-lines__item animate-in-up">
-    <div class="col-12 col-md-2">
-      <span class="resume-lines__date animate-in-up">2023 - 2024</span>
-    </div>
-    <div class="col-12 col-md-5">
-      <h5 class="resume-lines__title animate-in-up">Member - LSIST</h5>
-      <p class="resume-lines__source animate-in-up">in the
-        <a href="#0" class="text-link-bold" target="_blank">Lingkar Studi Ilmiah Sains dan Teknologi (LSIST)</a>
-      </p>
-    </div>
-    <div class="col-12 col-md-5">
-      <p class="small resume-lines__descr animate-in-up">Worked on scientific papers and essays as part of a collaborative team.</p>
-    </div>
+<!-- ===================== Certificate Modal ===================== -->
+<div id="cert-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Detail sertifikat">
+  <div class="modal-box glass">
+    <button class="modal-close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-icon-lg"><i class="fa-solid fa-award"></i></div>
+    <h3></h3>
+    <p class="issuer-detail" style="color:var(--text-dim);margin-top:8px;"></p>
   </div>
 </div>
-<!-- Experience Lines End -->
 
+<!-- ===================== Scripts ===================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
 
-          </div>
-          <!-- Content Block - Experience End -->
-
-          <!-- Content Block - H3 Block Start -->
-          <div class="content__block">
-            <div class="section-h3 section-h3-grid">
-              <h3 class="h3__title animate-in-up">My favourite tools</h3>
-            </div>
-          </div>
-          <!-- Content Block - H3 Block End -->
-
-          <!-- Content Block - Tools List Start -->
-<div class="content__block grid-block block-large">
-  <!-- Tools List Start -->
-  <div class="tools-cards d-flex justify-content-start flex-wrap">
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">HTML5</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">CSS3</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ4qe-TiNdb7kONl0a1C3a1R3H9TPWKSJeGg&s" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">JavaScript</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">TypeScript</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cms-assets.tutsplus.com/uploads/users/1499/posts/29445/preview_image/kotlin.jpg" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">Kotlin</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">VS Code</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">C++</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">MySQL</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9BVeiXAMU-SsGkVehbpBV1pOlUClyxhC2bg&s" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">MongoDB</h6>
-      </div>
-    </div>
-    <!-- tools single item -->
-    <div class="tools-cards__item d-flex grid-item-s animate-card-5">
-      <div class="tools-cards__card">
-        <img class="tools-cards__icon animate-in-up" src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Tools Icon">
-        <h6 class="tools-cards__caption animate-in-up">Figma</h6>
-      </div>
-    </div>
-  </div>
-  <!-- Tools List End -->
-</div>
-<!-- Content Block - Tools List End -->
-
-        </section>
-        <!-- Resume Section End -->
-
-        <!-- Contact Section Start -->
-        <section id="contact" class="inner contact">
-
-          <!-- Content Block - H2 Section Title Start -->
-          <div class="content__block section-title">
-            <p class="h2__subtitle  animate-in-up">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
-                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
-              </svg>
-              <span>Contact</span>
-            </p>
-            <h2 class="h2__title  animate-in-up">Feel free to reach out for questions or collaborations!</h2>
-          </div>
-          <!-- Content Block - H2 Section Title End -->
-
-          <!-- Content Block - Contact Form Start -->
-          <div class="content__block grid-block block-grid-large">
-            <div class="form-container">
-
-              <!-- Reply Messages Start -->
-              <div class="form__reply centered text-center">
-                <i class="ph-bold ph-smiley reply__icon"></i>
-                <p class="reply__title">Done!</p>
-                <span class="reply__text">Thanks for your message. I'll get back as soon as possible.</span>
-              </div> 
-              <!-- Reply Messages End -->
-
-              <!-- Contact Form Start -->
-              <form class="form contact-form" id="contact-form">
-                <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="Starter Template">
-                <input type="hidden" name="admin_email" value="support@mixdesign.club">
-                <input type="hidden" name="form_subject" value="Contact Form Message">
-                <!-- END Hidden Required Fields-->
-                <div class="container-fluid p-0">
-                  <div class="row gx-0">
-                    <div class="col-12 col-md-6 form__item animate-in-up">
-                      <input type="text" name="Name" placeholder="Your Name*" required>
-                    </div>
-                    <div class="col-12 col-md-6 form__item animate-in-up">
-                      <input type="text" name="Company" placeholder="Company Name">
-                    </div>
-                    <div class="col-12 col-md-6 form__item animate-in-up">
-                      <input type="email" name="E-mail" placeholder="Email Adress*" required>
-                    </div>
-                    <div class="col-12 col-md-6 form__item animate-in-up">
-                      <input type="tel" name="Phone" placeholder="Phone Number*" required>
-                    </div>
-                    <div class="col-12 form__item animate-in-up">
-                      <textarea name="Message" placeholder="A Few Words*" required></textarea>
-                    </div>
-                    <div class="col-12 form__item animate-in-up">
-                      <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
-                        <span class="btn-caption">Send Message</span>
-                        <i class="ph-bold ph-paper-plane-tilt"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <!-- Contact Form End -->
-
-            </div>
-          </div>
-          <!-- Content Block - Contact Form End -->
-
-         
-
-          <!-- Content Block - Contact Data Start -->
-          <div class="content__block">
-            <div class="container-fluid p-0 contact-lines animate-in-up">
-              <div class="row g-0 contact-lines__item">
-                <!-- data item -->
-                <div class="col-12 col-md-4 contact-lines__data">
-                  <p class="contact-lines__title animate-in-up">Location</p>
-                  <p class="contact-lines__text animate-in-up">
-                    <a class="text-link-bold" href="https://www.google.com/maps/place/UIN+Sunan+Gunung+Djati+Bandung/" target="_blank" rel="noopener">Bandung, Indonesia</a>
-                  </p>
-                </div>
-                <!-- data item -->
-                <div class="col-12 col-md-4 contact-lines__data">
-                  <p class="contact-lines__title animate-in-up">Phone</p>
-                  <p class="contact-lines__text animate-in-up">
-                    <a class="text-link-bold" href="https://wa.me/6289657767722"></a>089657767722</a>
-                  </p>
-                </div>
-                <!-- data item -->
-                <div class="col-12 col-md-4 contact-lines__data">
-                  <p class="contact-lines__title animate-in-up">Email</p>
-                  <p class="contact-lines__text animate-in-up">
-                    <a class="text-link-bold" href="mailto:sifamutiasya14@gmail.com?subject=Message%20from%20your%20site">sifamutiasya14@gmail.com</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Content Block - Contact Data End -->
-
-        </section>
-        <!-- Contact Section End -->
-
-      </div>
-    </div>
-    <!-- Page Content End -->
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-      <!-- Background of PhotoSwipe.
-      It's a separate element, as animating opacity is faster than rgba(). -->
-      <div class="pswp__bg"></div>
-
-      <!-- Slides wrapper with overflow:hidden. -->
-      <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-          <div class="pswp__top-bar">
-
-            <!--  Controls are self-explanatory. Order can be changed. -->
-
-            <div class="pswp__counter"></div>
-
-            <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
-
-            <button class="pswp__button pswp__button--share link-s" title="Share"></button>
-
-            <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
-
-            <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
-
-            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-            <!-- element will get class pswp__preloader-active when preloader is running -->
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-              <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
-
-            <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
-
-            <div class="pswp__caption">
-              <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Load Scripts Start -->
-    <script src="js/libs.min.js"></script>
-    <script>
-      const randomX = random(-400, 400);
-      const randomY = random(-200, 200);
-      const randomDelay = random(0, 50);
-      const randomTime = random(20, 40);
-      const randomTime2 = random(5, 12);
-      const randomAngle = random(-30, 150);
-
-      const blurs = gsap.utils.toArray(".blur");
-      blurs.forEach((blur) => {
-        gsap.set(blur, {
-          x: randomX(-1),
-          y: randomX(1),
-          rotation: randomAngle(-1)
-        });
-
-        moveX(blur, 1);
-        moveY(blur, -1);
-        rotate(blur, 1);
-      });
-
-      function rotate(target, direction) {
-        gsap.to(target, randomTime2(), {
-          rotation: randomAngle(direction),
-          ease: Sine.easeInOut,
-          onComplete: rotate,
-          onCompleteParams: [target, direction * -1]
-        });
-      }
-
-      function moveX(target, direction) {
-        gsap.to(target, randomTime(), {
-          x: randomX(direction),
-          ease: Sine.easeInOut,
-          onComplete: moveX,
-          onCompleteParams: [target, direction * -1]
-        });
-      }
-
-      function moveY(target, direction) {
-        gsap.to(target, randomTime(), {
-          y: randomY(direction),
-          ease: Sine.easeInOut,
-          onComplete: moveY,
-          onCompleteParams: [target, direction * -1]
-        });
-      }
-
-      function random(min, max) {
-        const delta = max - min;
-        return (direction = 1) => (min + delta * Math.random()) * direction;
-      }
-    </script>
-    <script src="js/app.js"></script>
-    <script src="js/gallery-init.js"></script>
-    <!-- Load Scripts End -->
-    
-  </body>
-
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/loader.js" defer></script>
+<script src="assets/js/cursor.js" defer></script>
+<script src="assets/js/three-background.js" defer></script>
+<script src="assets/js/hero-visual.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
 </html>

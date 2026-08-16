@@ -1,0 +1,19 @@
+{
+  "name": "Nadia Ardra Wibisono — Portfolio",
+  "short_name": "N.AW Portfolio",
+  "description": "Portfolio Data Analyst, Data Scientist, Machine Learning Engineer, dan Full Stack Developer.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
