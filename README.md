@@ -1,4 +1,4 @@
-# Portfolio — AI Digital Command Center
+# Portfolio 
 
 Website portfolio statis (HTML5, CSS3, JavaScript ES6+, Three.js, GSAP, Lenis)
 untuk Data Analyst / Data Scientist / Machine Learning Engineer / Full Stack
