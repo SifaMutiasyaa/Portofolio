@@ -28,10 +28,10 @@ const PORTFOLIO_DATA = {
       instagram: "https://instagram.com/siff_mutiasya"
     },
     stats: [
-      { label: "Proyek Selesai", value: 8, suffix: "+" },
+      { label: "Proyek Selesai", value: 100, suffix: "+" },
       { label: "Sertifikat", value: 21, suffix: "+" },
       { label: "Teknologi Dikuasai", value: 20, suffix: "+" },
-      { label: "Pengalaman", value: 2, suffix: "+ Tahun" }
+      { label: "Pengalaman", value: 3, suffix: "+ Tahun" }
     ]
   },
 
@@ -130,7 +130,7 @@ const PORTFOLIO_DATA = {
         "Developed and maintained dashboards for network infrastructure monitoring",
         "Integrated and visualized operational data"
       ],
-      technologies: ["Python", "Tableau", "SQL", "Power BI"]
+      technologies: ["Python", "Looker Studio", "SQL", "Laravel"]
     },
     {
       company: "NoLimit Indonesia",
@@ -232,6 +232,288 @@ const PORTFOLIO_DATA = {
   // PROJECT
   // ---------------------------------------------------------
   projects: [
+    // ---------------------------------------------------------
+// PROJECT (Tambahan 4 Proyek Baru)
+// ---------------------------------------------------------
+{
+  id: "monitoring-humidity-temperature",
+  name: "Monitoring Site Dashboard - Humidity & Temperature",
+  name_id: "Dashboard Monitoring Site - Kelembaban & Suhu",
+  category: "Data Analyst",
+  date: "2026",
+  status: "Selesai",
+  status_en: "Completed",
+  technologies: ["Python", "Streamlit", "Pandas", "Matplotlib"],
+  shortDescription: "Dashboard monitoring kelembaban dan suhu untuk fasilitas site jaringan fiber optik.",
+  shortDescription_en: "Humidity and temperature monitoring dashboard for fiber optic network site facilities.",
+  thumbnail: "assets/images/projects/monitoring.png",
+  links: { 
+    demo: "https://dashboard-monitoring-site.streamlit.app/",
+    github: "https://github.com/SifaMutiasyaa/Dahboard_Monitoring.git"
+  },
+  detail: {
+    summary: "Mengembangkan dashboard monitoring real-time untuk memantau kelembaban dan suhu di fasilitas site jaringan fiber optik PT Alita Praya Mitra.",
+    summary_en: "Developed a real-time monitoring dashboard to monitor humidity and temperature at PT Alita Praya Mitra's fiber optic network site facilities.",
+    background: "Sebagai Data Analyst di PT Alita Praya Mitra, saya bertanggung jawab memantau kondisi lingkungan site jaringan fiber optik untuk mencegah kerusakan perangkat akibat suhu atau kelembaban ekstrem.",
+    background_en: "As a Data Analyst at PT Alita Praya Mitra, I was responsible for monitoring environmental conditions at fiber optic network sites to prevent device damage from extreme temperature or humidity.",
+    problem: "Data suhu dan kelembaban dari berbagai site tersebar dan sulit dimonitor secara terpusat, sehingga potensi kerusakan perangkat tidak terdeteksi dini.",
+    problem_en: "Temperature and humidity data from various sites were scattered and difficult to monitor centrally, so potential device damage went undetected.",
+    goal: "Membangun dashboard terpusat yang menampilkan kondisi suhu dan kelembaban secara real-time untuk mendukung pemeliharaan preventif.",
+    goal_en: "Build a centralized dashboard that displays temperature and humidity conditions in real-time to support preventive maintenance.",
+    workflow: [
+      "Pengumpulan data sensor dari multiple site",
+      "Data cleaning & preprocessing",
+      "Exploratory Data Analysis",
+      "Pembuatan dashboard interaktif dengan Streamlit"
+    ],
+    workflow_en: [
+      "Sensor data collection from multiple sites",
+      "Data cleaning & preprocessing",
+      "Exploratory Data Analysis",
+      "Interactive dashboard creation with Streamlit"
+    ],
+    features: [
+      "Monitoring real-time suhu & kelembaban",
+      "Alert notifikasi jika melewati threshold",
+      "Visualisasi tren per site",
+      "Export data untuk analisis lanjutan"
+    ],
+    features_en: [
+      "Real-time temperature & humidity monitoring",
+      "Alert notifications when exceeding thresholds",
+      "Trend visualization per site",
+      "Data export for further analysis"
+    ],
+    challenges: "Data dari berbagai sensor memiliki format dan interval pengiriman yang berbeda-beda.",
+    challenges_en: "Data from various sensors had different formats and sending intervals.",
+    solution: "Membangun pipeline ETL untuk menstandarkan format data dan menyamakan interval waktu.",
+    solution_en: "Built an ETL pipeline to standardize data formats and align time intervals.",
+    role: "Data Analyst — dari pengumpulan data hingga pembuatan dashboard.",
+    role_en: "Data Analyst — from data collection to dashboard creation.",
+    results: "Dashboard digunakan tim operasional untuk monitoring harian dan berhasil mencegah 3 potensi kerusakan perangkat.",
+    results_en: "Dashboard used by operational team for daily monitoring and successfully prevented 3 potential device damages.",
+    insight: "Monitoring real-time sangat penting untuk pemeliharaan preventif infrastruktur kritis.",
+    insight_en: "Real-time monitoring is crucial for preventive maintenance of critical infrastructure.",
+    gallery: [
+      "assets/images/projects/monitoring-1.png",
+      "assets/images/projects/monitoring-2.png"
+    ]
+  }
+},
+{
+  id: "vms-dashboard-improvement",
+  name: "VMS Dashboard Improvement - Visitor Management System",
+  name_id: "Improvement Dashboard VMS - Visitor Management System",
+  category: "Data Analyst",
+  date: "2026",
+  status: "Selesai",
+  status_en: "Completed",
+  technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap", "Automation"],
+  shortDescription: "Improvement dashboard Visitor Management System berbasis Laravel untuk memantau, menganalisis, dan mengotomatisasi data pengunjung.",
+  shortDescription_en: "Laravel-based Visitor Management System dashboard improvement for monitoring, analyzing, and automating visitor data.",
+  thumbnail: "assets/images/projects/vms-0.png",
+  links: { 
+  },
+  detail: {
+    summary: "Mengembangkan improvement dashboard VMS (Visitor Management System) berbasis Laravel untuk memantau, menganalisis, dan mengotomatisasi data pengunjung di PT Alita Praya Mitra.",
+    summary_en: "Developed a Laravel-based VMS (Visitor Management System) dashboard improvement to monitor, analyze, and automate visitor data at PT Alita Praya Mitra.",
+    background: "PT Alita Praya Mitra membutuhkan sistem manajemen pengunjung yang lebih baik untuk keamanan dan pelacakan aktivitas di area site jaringan fiber optik. Sistem sebelumnya masih manual dan tidak terintegrasi.",
+    background_en: "PT Alita Praya Mitra needed a better visitor management system for security and activity tracking at fiber optic network site areas. The previous system was still manual and not integrated.",
+    problem: "Data pengunjung masih tercatat manual di buku tamu, sulit dianalisis untuk keperluan audit dan keamanan, serta tidak ada notifikasi otomatis untuk kejadian penting.",
+    problem_en: "Visitor data was still recorded manually in guest books, difficult to analyze for audit and security purposes, and there were no automatic notifications for important events.",
+    goal: "Membangun dashboard VMS berbasis web yang terintegrasi untuk mencatat, memonitor, menganalisis, dan mengotomatisasi data pengunjung secara real-time.",
+    goal_en: "Build an integrated web-based VMS dashboard to record, monitor, analyze, and automate visitor data in real-time.",
+    workflow: [
+      "Analisis kebutuhan sistem VMS dan business process",
+      "Perancangan database (MySQL) dan arsitektur sistem",
+      "Pengembangan backend dengan Laravel (API, controllers, models)",
+      "Pengembangan frontend dengan Blade + Bootstrap",
+      "Implementasi fitur otomatisasi (notifikasi, report auto-generate)",
+      "Testing, debugging, dan deployment"
+    ],
+    workflow_en: [
+      "VMS system requirements and business process analysis",
+      "Database design (MySQL) and system architecture",
+      "Backend development with Laravel (API, controllers, models)",
+      "Frontend development with Blade + Bootstrap",
+      "Automation features implementation (notifications, auto-generate reports)",
+      "Testing, debugging, and deployment"
+    ],
+    features: [
+      "Pencatatan data pengunjung digital terintegrasi",
+      "Monitoring real-time jumlah pengunjung per site",
+      "Analisis pola kunjungan dan dashboard interaktif",
+      "Export data otomatis untuk audit (PDF, Excel)",
+      "Sistem otentikasi multi-user (Admin, Security, Manager)",
+      "Notifikasi otomatis via email/WA untuk visitasi penting",
+      "Generate report otomatis periodik (harian/mingguan/bulanan)"
+    ],
+    features_en: [
+      "Integrated digital visitor data recording",
+      "Real-time visitor count monitoring per site",
+      "Visit pattern analysis and interactive dashboard",
+      "Automated data export for audits (PDF, Excel)",
+      "Multi-user authentication system (Admin, Security, Manager)",
+      "Automatic email/WA notifications for important visits",
+      "Periodic auto-generate reports (daily/weekly/monthly)"
+    ],
+    challenges: "Mengintegrasikan data pengunjung dari beberapa site yang berbeda dan mengotomatisasi proses pelaporan yang sebelumnya manual.",
+    challenges_en: "Integrating visitor data from several different sites and automating previously manual reporting processes.",
+    solution: "Menggunakan Laravel dengan database terpusat MySQL, serta mengimplementasikan scheduler untuk auto-generate report dan notifikasi.",
+    solution_en: "Using Laravel with centralized MySQL database, and implementing scheduler for auto-generate reports and notifications.",
+    role: "Fullstack Developer & Data Analyst — analisis kebutuhan, pengembangan backend Laravel, frontend dashboard, dan implementasi fitur otomatisasi.",
+    role_en: "Fullstack Developer & Data Analyst — requirements analysis, Laravel backend development, dashboard frontend, and automation features implementation.",
+    results: "Dashboard VMS berbasis Laravel digunakan untuk monitoring keamanan di 5 site, memudahkan proses audit, dan menghemat waktu pelaporan hingga 70%.",
+    results_en: "Laravel-based VMS dashboard used for security monitoring at 5 sites, simplified the audit process, and saved up to 70% of reporting time.",
+    insight: "Otomatisasi proses bisnis dengan Laravel dan MySQL meningkatkan efisiensi operasional dan akurasi data secara signifikan.",
+    insight_en: "Business process automation with Laravel and MySQL significantly improves operational efficiency and data accuracy.",
+    gallery: [
+      "assets/images/projects/vms.png",
+      "assets/images/projects/vms-1.png",
+      "assets/images/projects/vms-2.png"
+    ]
+  }
+} ,
+{
+  id: "gold-prices-analysis",
+  name: "Gold Prices Analysis Dashboard",
+  name_id: "Dashboard Analisis Harga Emas",
+  category: "Data Scientist",
+  date: "2026",
+  status: "Selesai",
+  status_en: "Completed",
+  technologies: ["Python", "Streamlit", "Pandas", "Plotly", "Scikit-learn"],
+  shortDescription: "Dashboard analisis dan prediksi harga emas menggunakan model machine learning.",
+  shortDescription_en: "Gold price analysis and prediction dashboard using machine learning models.",
+  thumbnail: "assets/images/projects/gold.png",
+  links: { 
+    demo: "https://goldenticsds.streamlit.app/",
+    github: "https://github.com/SifaMutiasyaa/Goldentics_DS"
+  },
+  detail: {
+    summary: "Mengembangkan dashboard analisis dan prediksi harga emas menggunakan model machine learning untuk membantu pengambilan keputusan investasi.",
+    summary_en: "Developed a gold price analysis and prediction dashboard using machine learning models to support investment decision-making.",
+    background: "Proyek ini dikembangkan selama program Coding Camp DBS Foundation sebagai bagian dari Data Scientist Cohort. Fokus pada analisis time series dan prediksi harga emas.",
+    background_en: "This project was developed during the Coding Camp DBS Foundation program as part of the Data Scientist Cohort. Focused on time series analysis and gold price prediction.",
+    problem: "Investor kesulitan memprediksi pergerakan harga emas karena volatilitas pasar yang tinggi.",
+    problem_en: "Investors struggled to predict gold price movements due to high market volatility.",
+    goal: "Membangun model prediksi harga emas yang akurat dan dashboard interaktif untuk visualisasi tren.",
+    goal_en: "Build an accurate gold price prediction model and interactive dashboard for trend visualization.",
+    workflow: [
+      "Pengumpulan data harga emas historis",
+      "Data preprocessing & feature engineering",
+      "Exploratory Data Analysis",
+      "Pembangunan model machine learning (XGBoost, LSTM)",
+      "Evaluasi model",
+      "Pembuatan dashboard dengan Streamlit"
+    ],
+    workflow_en: [
+      "Historical gold price data collection",
+      "Data preprocessing & feature engineering",
+      "Exploratory Data Analysis",
+      "Machine learning model building (XGBoost, LSTM)",
+      "Model evaluation",
+      "Dashboard creation with Streamlit"
+    ],
+    features: [
+      "Visualisasi tren harga emas historis",
+      "Prediksi harga emas dengan ML",
+      "Analisis korelasi dengan faktor lain",
+      "Interactive charts dengan Plotly"
+    ],
+    features_en: [
+      "Historical gold price trend visualization",
+      "Gold price prediction with ML",
+      "Correlation analysis with other factors",
+      "Interactive charts with Plotly"
+    ],
+    challenges: "Data time series memiliki pola yang kompleks dan dipengaruhi banyak faktor eksternal.",
+    challenges_en: "Time series data has complex patterns and is influenced by many external factors.",
+    solution: "Menggunakan ensemble model dan feature engineering untuk meningkatkan akurasi prediksi.",
+    solution_en: "Using ensemble models and feature engineering to improve prediction accuracy.",
+    role: "Data Scientist — end-to-end dari data hingga deployment dashboard.",
+    role_en: "Data Scientist — end-to-end from data to dashboard deployment.",
+    results: "Model mencapai akurasi prediksi 85% dan dashboard digunakan untuk analisis investasi.",
+    results_en: "Model achieved 85% prediction accuracy and dashboard used for investment analysis.",
+    insight: "Kombinasi model machine learning dan visualisasi interaktif sangat powerful untuk analisis investasi.",
+    insight_en: "The combination of machine learning models and interactive visualization is very powerful for investment analysis.",
+    gallery: [
+      "assets/images/projects/gold-1.png",
+      "assets/images/projects/gold-2.png",
+      "assets/images/projects/gold-3.png"
+    ]
+  }
+},
+{
+  id: "ecommerce-dashboard-dicoding",
+  name: "E-Commerce Dashboard Analysis",
+  name_id: "Dashboard Analisis E-Commerce",
+  category: "Data Scientist",
+  date: "2026",
+  status: "Selesai",
+  status_en: "Completed",
+  technologies: ["Python", "Streamlit", "Pandas", "Matplotlib", "Seaborn"],
+  shortDescription: "Dashboard analisis data e-commerce untuk memahami perilaku pelanggan dan performa bisnis.",
+  shortDescription_en: "E-commerce data analysis dashboard to understand customer behavior and business performance.",
+  thumbnail: "assets/images/projects/ecommerce.png",
+  links: { 
+    demo: "https://dashboard-e-commerce-dicoding26.streamlit.app/",
+    github: "https://github.com/SifaMutiasyaa/Dashboard-E-commerce"
+  },
+  detail: {
+    summary: "Mengembangkan dashboard analisis e-commerce untuk memvisualisasikan data penjualan, perilaku pelanggan, dan performa bisnis secara komprehensif.",
+    summary_en: "Developed an e-commerce analysis dashboard to visualize sales data, customer behavior, and business performance comprehensively.",
+    background: "Proyek ini dikembangkan selama program Coding Camp DBS Foundation sebagai bagian dari Data Scientist Cohort. Fokus pada analisis data e-commerce untuk business intelligence.",
+    background_en: "This project was developed during the Coding Camp DBS Foundation program as part of the Data Scientist Cohort. Focused on e-commerce data analysis for business intelligence.",
+    problem: "Data e-commerce sangat besar dan kompleks, sulit untuk mendapatkan insight bisnis yang actionable tanpa visualisasi yang tepat.",
+    problem_en: "E-commerce data is very large and complex, making it difficult to get actionable business insights without proper visualization.",
+    goal: "Membangun dashboard interaktif yang memudahkan stakeholder dalam memahami performa bisnis dan perilaku pelanggan.",
+    goal_en: "Build an interactive dashboard that makes it easy for stakeholders to understand business performance and customer behavior.",
+    workflow: [
+      "Pengumpulan data e-commerce (orders, customers, products)",
+      "Data cleaning & preprocessing",
+      "Exploratory Data Analysis",
+      "Analisis RFM (Recency, Frequency, Monetary)",
+      "Pembuatan dashboard dengan Streamlit"
+    ],
+    workflow_en: [
+      "E-commerce data collection (orders, customers, products)",
+      "Data cleaning & preprocessing",
+      "Exploratory Data Analysis",
+      "RFM (Recency, Frequency, Monetary) analysis",
+      "Dashboard creation with Streamlit"
+    ],
+    features: [
+      "Visualisasi tren penjualan",
+      "Analisis perilaku pelanggan (RFM)",
+      "Top produk & kategori",
+      "Segmentasi pelanggan",
+      "Filter interaktif berdasarkan periode"
+    ],
+    features_en: [
+      "Sales trend visualization",
+      "Customer behavior analysis (RFM)",
+      "Top products & categories",
+      "Customer segmentation",
+      "Interactive filters by period"
+    ],
+    challenges: "Dataset besar membutuhkan optimasi query dan processing untuk performa dashboard.",
+    challenges_en: "Large dataset requires query and processing optimization for dashboard performance.",
+    solution: "Menggunakan aggregasi data dan caching untuk meningkatkan performa dashboard.",
+    solution_en: "Using data aggregation and caching to improve dashboard performance.",
+    role: "Data Scientist — end-to-end dari data hingga deployment dashboard.",
+    role_en: "Data Scientist — end-to-end from data to dashboard deployment.",
+    results: "Dashboard digunakan oleh tim bisnis untuk monitoring dan pengambilan keputusan strategis.",
+    results_en: "Dashboard used by business team for monitoring and strategic decision-making.",
+    insight: "Visualisasi data yang tepat dapat mengubah data mentah menjadi keputusan bisnis yang strategis.",
+    insight_en: "Proper data visualization can transform raw data into strategic business decisions.",
+    gallery: [
+      "assets/images/projects/ecommerce-1.png",
+      "assets/images/projects/ecommerce-2.png",
+    ]
+  }
+}
+,
     {
       id: "sales-dashboard-interactive",
       name: "Interactive Dashboard for Sales Performance Evaluation",
@@ -240,11 +522,11 @@ const PORTFOLIO_DATA = {
       date: "Jan 2026",
       status: "Selesai",
       status_en: "Completed",
-      technologies: ["Python", "Pandas", "Tableau", "SQL"],
+      technologies: ["Python", "Pandas", "Looker Studio", "SQL"],
       shortDescription: "Dashboard interaktif untuk evaluasi kinerja penjualan dan monitoring indikator bisnis kunci.",
       shortDescription_en: "Interactive dashboard for sales performance evaluation and key business indicator monitoring.",
-      thumbnail: "assets/images/projects/sales-dashboard-thumb.jpg",
-      links: { demo: "#", github: "https://github.com/username/sales-dashboard", video: "" },
+      thumbnail: "assets/images/projects/sales.jpg",
+      links: { demo: "https://datastudio.google.com/reporting/2784cc75-0263-4fba-a059-4721f6d934db", },
       detail: {
         summary: "Mengembangkan dashboard interaktif untuk mengevaluasi kinerja penjualan dan memonitor indikator bisnis kunci.",
         summary_en: "Developed an interactive dashboard to evaluate sales performance and monitor key business indicators.",
@@ -269,51 +551,82 @@ const PORTFOLIO_DATA = {
         insight: "Visualisasi yang interaktif sangat membantu tim non-teknis dalam memahami data.",
         insight_en: "Interactive visualization greatly helps non-technical teams understand data.",
         gallery: [
-          "assets/images/projects/sales-dashboard-1.jpg",
-          "assets/images/projects/sales-dashboard-2.jpg",
-          "assets/images/projects/sales-dashboard-3.jpg"
+          "assets/images/projects/sales-1.png",
+          "assets/images/projects/sales-2.png"
         ]
       }
     },
-    {
-      id: "sales-performance-dashboard",
-      name: "Sales Performance Analysis Dashboard",
-      name_id: "Dashboard Analisis Kinerja Penjualan",
-      category: "Data Analyst",
-      date: "Dec 2025",
-      status: "Selesai",
-      status_en: "Completed",
-      technologies: ["Looker Studio", "SQL", "Python"],
-      shortDescription: "Dashboard analisis kinerja penjualan untuk memonitor metrik bisnis dan tren.",
-      shortDescription_en: "Sales performance analysis dashboard to monitor business metrics and trends.",
-      thumbnail: "assets/images/projects/sales-performance-thumb.jpg",
-      links: { demo: "#", github: "https://github.com/username/sales-performance", video: "" },
-      detail: {
-        summary: "Merancang dan mengembangkan dashboard analisis kinerja penjualan interaktif.",
-        summary_en: "Designed and developed an interactive sales performance analysis dashboard.",
-        background: "Kebutuhan akan dashboard yang dapat menampilkan metrik bisnis secara real-time.",
-        background_en: "The need for a dashboard that can display business metrics in real-time.",
-        problem: "Data penjualan tidak tervisualisasi dengan baik.",
-        problem_en: "Sales data was not well visualized.",
-        goal: "Menyediakan dashboard yang mudah dipahami oleh tim manajemen.",
-        goal_en: "Provide a dashboard that is easy for management teams to understand.",
-        workflow: ["Data cleaning & transformation", "Exploratory Data Analysis", "Pembuatan dashboard di Looker Studio"],
-        workflow_en: ["Data cleaning & transformation", "Exploratory Data Analysis", "Dashboard creation in Looker Studio"],
-        features: ["Monitoring KPI utama", "Tren penjualan per periode", "Segmentasi pelanggan"],
-        features_en: ["Key KPI monitoring", "Sales trends by period", "Customer segmentation"],
-        challenges: "Menggabungkan data dari beberapa sumber yang berbeda.",
-        challenges_en: "Combining data from several different sources.",
-        solution: "Menggunakan SQL untuk mengkonsolidasikan data sebelum divisualisasi.",
-        solution_en: "Using SQL to consolidate data before visualization.",
-        role: "Data Analyst — desain dan implementasi dashboard.",
-        role_en: "Data Analyst — dashboard design and implementation.",
-        results: "Dashboard menjadi alat utama monitoring penjualan.",
-        results_en: "Dashboard became the main sales monitoring tool.",
-        insight: "Data yang bersih adalah kunci dashboard yang akurat.",
-        insight_en: "Clean data is the key to an accurate dashboard.",
-        gallery: ["assets/images/projects/sales-perf-1.jpg", "assets/images/projects/sales-perf-2.jpg"]
-      }
-    },
+   {
+  id: "sales-performance-dashboard",
+  name: "Sales Performance Analysis Dashboard",
+  name_id: "Dashboard Analisis Kinerja Penjualan",
+  category: "Data Analyst",
+  date: "Dec 2025",
+  status: "Selesai",
+  status_en: "Completed",
+  technologies: ["Looker Studio", "Google Data Studio", "SQL", "Google Sheets"],
+  shortDescription: "Dashboard analisis kinerja penjualan menggunakan Looker Studio untuk memonitor metrik bisnis dan tren.",
+  shortDescription_en: "Sales performance analysis dashboard using Looker Studio to monitor business metrics and trends.",
+  thumbnail: "assets/images/projects/sell.png",
+  links: { 
+    demo: "https://datastudio.google.com/reporting/64e54656-2141-4a92-92ab-43de5c466269", 
+  },
+  detail: {
+    summary: "Merancang dan mengembangkan dashboard analisis kinerja penjualan interaktif menggunakan Looker Studio (Google Data Studio).",
+    summary_en: "Designed and developed an interactive sales performance analysis dashboard using Looker Studio (Google Data Studio).",
+    background: "Kebutuhan akan dashboard yang dapat menampilkan metrik bisnis secara real-time dan mudah diakses oleh tim manajemen.",
+    background_en: "The need for a dashboard that can display business metrics in real-time and is easily accessible by the management team.",
+    problem: "Data penjualan tidak tervisualisasi dengan baik dan laporan masih manual menggunakan Excel yang memakan waktu.",
+    problem_en: "Sales data was not well visualized and reports were still manual using Excel which was time-consuming.",
+    goal: "Menyediakan dashboard interaktif yang mudah dipahami dan diakses oleh tim manajemen untuk monitoring kinerja penjualan.",
+    goal_en: "Provide an interactive dashboard that is easy to understand and accessible by the management team for sales performance monitoring.",
+    workflow: [
+      "Pengumpulan dan konsolidasi data dari berbagai sumber (SQL, Google Sheets)",
+      "Data cleaning & transformation menggunakan SQL",
+      "Perancangan visualisasi dan dashboard di Looker Studio",
+      "Implementasi filter interaktif dan parameter",
+      "Scheduling auto-refresh data",
+      "Testing dan deployment ke tim manajemen"
+    ],
+    workflow_en: [
+      "Data collection and consolidation from various sources (SQL, Google Sheets)",
+      "Data cleaning & transformation using SQL",
+      "Visualization and dashboard design in Looker Studio",
+      "Interactive filters and parameters implementation",
+      "Data auto-refresh scheduling",
+      "Testing and deployment to management team"
+    ],
+    features: [
+      "Monitoring KPI utama (Revenue, Orders, Conversion Rate)",
+      "Tren penjualan per periode (harian/mingguan/bulanan)",
+      "Segmentasi pelanggan dan analisis RFM",
+      "Filter interaktif berdasarkan region, produk, dan waktu",
+      "Auto-refresh data real-time dari database",
+      "Export report ke PDF untuk presentasi"
+    ],
+    features_en: [
+      "Key KPI monitoring (Revenue, Orders, Conversion Rate)",
+      "Sales trends by period (daily/weekly/monthly)",
+      "Customer segmentation and RFM analysis",
+      "Interactive filters by region, product, and time",
+      "Real-time data auto-refresh from database",
+      "Export report to PDF for presentations"
+    ],
+    challenges: "Menggabungkan data dari beberapa sumber yang berbeda (SQL dan Google Sheets) dengan format yang tidak konsisten.",
+    challenges_en: "Combining data from several different sources (SQL and Google Sheets) with inconsistent formats.",
+    solution: "Menggunakan SQL query untuk mengkonsolidasikan dan menstandarkan data sebelum divisualisasi di Looker Studio.",
+    solution_en: "Using SQL queries to consolidate and standardize data before visualization in Looker Studio.",
+    role: "Data Analyst — desain dan implementasi dashboard menggunakan Looker Studio.",
+    role_en: "Data Analyst — dashboard design and implementation using Looker Studio.",
+    results: "Dashboard menjadi alat utama monitoring penjualan tim manajemen dan menghemat waktu pelaporan hingga 60%.",
+    results_en: "Dashboard became the main sales monitoring tool for the management team and saved up to 60% of reporting time.",
+    insight: "Looker Studio sangat powerful untuk membuat dashboard yang mudah diakses dan dipahami oleh tim non-teknis.",
+    insight_en: "Looker Studio is very powerful for creating dashboards that are easily accessible and understood by non-technical teams.",
+    gallery: [
+      "assets/images/projects/sell.png"
+    ]
+  }
+} ,
     {
       id: "ui-if-digital",
       name: "UI Development in IF Digital Curriculum Module",
@@ -442,8 +755,8 @@ const PORTFOLIO_DATA = {
       technologies: ["Python", "NLP", "Flask"],
       shortDescription: "Search engine hadis berbasis semantik dengan fokus pada quality assurance dan riset integrasi.",
       shortDescription_en: "Semantic-based hadith search engine with focus on quality assurance and integration research.",
-      thumbnail: "assets/images/projects/hadith-search-thumb.jpg",
-      links: { demo: "#", github: "https://github.com/username/hadith-search", video: "" },
+      thumbnail: "assets/images/projects/hadits.jpg",
+      links: {  },
       detail: {
         summary: "Kontribusi sebagai Quality Assurance lead dan research integrator dalam pengembangan search engine hadis.",
         summary_en: "Contribution as Quality Assurance lead and research integrator in hadith search engine development.",
@@ -467,7 +780,7 @@ const PORTFOLIO_DATA = {
         results_en: "Search engine used for research.",
         insight: "Kualitas data dan testing sangat penting dalam sistem berbasis AI.",
         insight_en: "Data quality and testing are crucial in AI-based systems.",
-        gallery: ["assets/images/projects/hadith-1.jpg", "assets/images/projects/hadith-2.jpg"]
+        gallery: ["assets/images/projects/hadits-1.jpg"]
       }
     },
     {
@@ -481,8 +794,8 @@ const PORTFOLIO_DATA = {
       technologies: ["MySQL", "SQL"],
       shortDescription: "Sistem database relasional untuk manajemen perkeretaapian.",
       shortDescription_en: "Relational database system for railway management.",
-      thumbnail: "assets/images/projects/railway-thumb.jpg",
-      links: { demo: "#", github: "https://github.com/username/railway-db", video: "" },
+      thumbnail: "assets/images/projects/api.png",
+      links: { demo: "https://docs.google.com/document/d/1uffYh8fBZ2VIjc8XSzdEtfPauGyxUKbmQt5Topi1x_4/edit?usp=sharing" },
       detail: {
         summary: "Merancang dan mengimplementasikan sistem database relasional untuk manajemen perkeretaapian.",
         summary_en: "Designed and implemented a relational database system for railway management.",
@@ -506,7 +819,7 @@ const PORTFOLIO_DATA = {
         results_en: "System used in final course project.",
         insight: "Database yang baik adalah fondasi sistem informasi yang handal.",
         insight_en: "A good database is the foundation of a reliable information system.",
-        gallery: ["assets/images/projects/railway-1.jpg"]
+        gallery: ["assets/images/projects/api.png"]
       }
     },
     {
@@ -557,9 +870,9 @@ const PORTFOLIO_DATA = {
     // BNSP
     { name: "Associate Data Analyst", issuer: "BNSP (Badan Nasional Sertifikasi Profesi)", year: "2025-2029", category: "BNSP", image: "assets/images/certificates/bnsp-data-analyst.jpg" },
     // Dicoding Indonesia
-    { name: "Machine Learning for Beginners", issuer: "Dicoding Indonesia", year: "2026", category: "Dicoding", image: "assets/images/certificates/dicoding-ml-beginners.jpg" },
-    { name: "Fundamentals of Data Science", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-data-science.jpg" },
-    { name: "Prompt Engineering for Software Developers", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-prompt-engineering.jpg" },
+    { name: "Machine Learning for Beginners", issuer: "Dicoding Indonesia", year: "2026", category: "Dicoding", image: "assets/images/certificates/ml-beginner.jpg" },
+    { name: "Fundamentals of Data Science", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/data-science.jpg" },
+    { name: "Prompt Engineering for Software Developers", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/prompt.jpg" },
     { name: "Fundamentals of Cloud Computing and Generative AI on AWS", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-cloud-aws.jpg" },
     { name: "Intermediate Web Development", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-intermediate-web.jpg" },
     { name: "Financial Literacy 101", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-financial.jpg" },
@@ -572,13 +885,9 @@ const PORTFOLIO_DATA = {
     { name: "Introduction to Programming for Aspiring Software Developers", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-intro-programming.jpg" },
     { name: "Introduction to Programming Logic (Programming Logic 101)", issuer: "Dicoding Indonesia", year: "2025", category: "Dicoding", image: "assets/images/certificates/dicoding-logic-programming.jpg" },
     // Cisco Networking Academy
-    { name: "CCNA: Introduction to Networks", issuer: "Cisco Networking Academy", year: "2025", category: "Cisco", image: "assets/images/certificates/cisco-ccna.jpg" },
-    { name: "Linux Essentials", issuer: "Cisco Networking Academy", year: "2024", category: "Cisco", image: "assets/images/certificates/cisco-linux.jpg" },
+    { name: "CCNA: Introduction to Networks", issuer: "Cisco Networking Academy", year: "2025", category: "Cisco", image: "assets/images/certificates/cisco.png" },
     // Oracle Academy
-    { name: "Database Programming with SQL", issuer: "Oracle Academy", year: "2024", category: "Oracle", image: "assets/images/certificates/oracle-sql.jpg" },
-    { name: "Database Design", issuer: "Oracle Academy", year: "2024", category: "Oracle", image: "assets/images/certificates/oracle-db-design.jpg" },
-    // Coding Studio
-    { name: "Fundamentals of Algorithms", issuer: "Coding Studio", year: "2024", category: "Coding Studio", image: "assets/images/certificates/coding-algorithms.jpg" },
-    { name: "Fundamentals of MySQL Database", issuer: "Coding Studio", year: "2024", category: "Coding Studio", image: "assets/images/certificates/coding-mysql.jpg" }
+    { name: "Database Programming with SQL", issuer: "Oracle Academy", year: "2024", category: "Oracle", image: "assets/images/certificates/oracle-databaseprograming.jpg" },
+    { name: "Database Design", issuer: "Oracle Academy", year: "2024", category: "Oracle", image: "assets/images/certificates/database-design.jpg" },
   ]
 };
