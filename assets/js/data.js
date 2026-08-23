@@ -370,7 +370,8 @@ const PORTFOLIO_DATA = {
     gallery: [
       "assets/images/projects/vms.png",
       "assets/images/projects/vms-1.png",
-      "assets/images/projects/vms-2.png"
+      "assets/images/projects/vms-2.png",
+      "assets/images/projects/vms-3.png",
     ]
   }
 } ,
